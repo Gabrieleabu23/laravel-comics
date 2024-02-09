@@ -12,7 +12,7 @@
 <body>
     <div class="text-center">
         @include('components.header')
-        @yield('content')
+        @yield('content') // richiamo della pagina main.blade.php
         @include('components.footer')
     </div>
 </body>

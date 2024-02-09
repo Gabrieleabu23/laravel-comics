@@ -6,3 +6,6 @@ Route::get('/', function () {
 
     return view('pages.index');
 });
+use App\Http\Controllers\Controller;
+
+Route::get('/', [Controller::class, 'DatiComics']);
