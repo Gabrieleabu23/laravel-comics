@@ -1,3 +1,55 @@
 @import "~bootstrap/scss/bootstrap";
+$colore:#2c2a2a;
+// $blu_active_border:#0280f6;
+$black_background:#1c1c1c;
+$blue_background:#0282f9;
+$blue_border_button:#0975d9;
+$grey_text_link:#6a7472;
+$grey_background_color:#303030;
+$height_container:100px;
+a{
+    text-decoration: none;
+    
+}
+.blu_active_border{
+    border-bottom: 1px solid #0280f6;
+    padding: 20px 0px;
+}
 
 
+header{
+    .top_header{
+        background-color: $blue_background;
+    }
+    background-color: white;
+    img{
+            width: 80px;
+        }
+    ul{
+            list-style-type: none;
+            li{
+                // padding: 0.8rem;
+                a{
+                    color: $colore;
+                    padding: 0.8rem;
+                    // border-bottom: 1px solid $blu_active_border;
+                   
+                }
+                
+               
+            }
+    }
+}
+
+
+.col-2{
+    img{
+        width: 150px;
+        height: 150px;
+       object-fit: cover;
+       object-position: top;
+    }
+    h6{
+        margin: 10px 0px;
+    }
+}

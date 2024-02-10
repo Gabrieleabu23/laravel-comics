@@ -9,3 +9,4 @@ Route::get('/', function () {
 use App\Http\Controllers\Controller;
 
 Route::get('/', [Controller::class, 'DatiComics']);
+Route::get('/', [Controller::class, 'ListaLink']);

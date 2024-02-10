@@ -10,10 +10,8 @@
     @yield('head')
 </head>
 <body>
-    <div class="text-center">
-        @include('components.header')
-        @yield('content') // richiamo della pagina main.blade.php
+        @yield('header')
+        @yield('content') 
         @include('components.footer')
-    </div>
 </body>
 </html>
