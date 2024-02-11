@@ -1,55 +1,104 @@
 @import "~bootstrap/scss/bootstrap";
-$colore:#2c2a2a;
+$colore: #2c2a2a;
 // $blu_active_border:#0280f6;
-$black_background:#1c1c1c;
-$blue_background:#0282f9;
-$blue_border_button:#0975d9;
-$grey_text_link:#6a7472;
-$grey_background_color:#303030;
-$height_container:100px;
-a{
-    text-decoration: none;
-    
+$black_background: #1c1c1c;
+$blue_background: #0282f9;
+$blue_border_button: #0975d9;
+$grey_text_link: #6a7472;
+$grey_background_color: #303030;
+$height_container: 100px;
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    background-color: $black_background;
+    color: white;
 }
-.blu_active_border{
-    border-bottom: 1px solid #0280f6;
+a {
+    text-decoration: none;
+}
+.blu_active_border {
+    border-bottom: 2px solid #0280f6;
     padding: 20px 0px;
 }
 
-
-header{
-    .top_header{
+header {
+    .top_header {
         background-color: $blue_background;
     }
     background-color: white;
-    img{
-            width: 80px;
-        }
-    ul{
-            list-style-type: none;
-            li{
+    img {
+        width: 80px;
+    }
+    ul {
+        list-style-type: none;
+        li {
+            // padding: 0.8rem;
+            a {
+                color: $colore;
                 // padding: 0.8rem;
-                a{
-                    color: $colore;
-                    padding: 0.8rem;
-                    // border-bottom: 1px solid $blu_active_border;
-                   
-                }
-                
-               
+                // border-bottom: 1px solid $blu_active_border;
             }
+        }
+    }
+    .form_search {
+        border-bottom: 3px solid $blue_background;
+        .nav_search {
+            border: none;
+            &::placeholder {
+                text-align: end;
+            }
+        }
     }
 }
 
+// MAIN
 
-.col-2{
-    img{
-        width: 150px;
-        height: 150px;
-       object-fit: cover;
-       object-position: top;
+.jumbo {
+    // DEBUG INIZIALE ESERCIZIO BASE
+    // background-color: $black_background;
+    background-image: url(/public/img/jumbotron.jpg);
+    background-size: cover;
+    height: 400px;
+    .main-container {
+        height: 100%;
+        position: relative;
     }
-    h6{
+}
+.main-container {
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.current_series_comics {
+    position: absolute;
+    bottom: -20px;
+    left: 60px;
+    background-color: $blue_background;
+    padding: 10px 20px;
+    // DEBUG
+    // border: 1px solid black;
+}
+
+.button_blue {
+    font-size: 12px;
+    padding: 10px 50px;
+    color: white;
+    background-color: $blue_background;
+}
+
+.col-2 {
+    img {
+        width: 175px;
+        height: 175px;
+        object-fit: cover;
+        object-position: top;
+    }
+    a {
+        cursor: default;
+    }
+    h6 {
         margin: 10px 0px;
     }
 }

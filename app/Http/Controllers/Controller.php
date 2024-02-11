@@ -10,6 +10,13 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function mostraContenuto()
+    {
+        $comics = $this->DatiComics();
+        $listPages = $this->ListaLink();
+    
+        return view('pages.main', compact('comics', 'listPages'));
+    }
     public function DatiComics()
     {
         $comics = [
@@ -225,7 +232,7 @@ class Controller extends BaseController
                 ],
             ],
         ];
-        return view('pages.main', compact('comics'));
+        return $comics;
     }
     public function ListaLink()
     {
@@ -281,6 +288,6 @@ class Controller extends BaseController
                 'active' => false,
             ],
         ];
-        return view('components.header', compact('listPages'));     
+        return $listPages;
     }
 }
