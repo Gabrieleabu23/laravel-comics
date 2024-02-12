@@ -88,8 +88,51 @@ header {
     background-color: $blue_background;
 }
 
-.col-2 {
+.blue_background{
+    background-color: $blue_background;
+    ul{
+        list-style: none;
+        li{
+            color: white;
+            h6{
+                font-weight: lighter;
+            }
+            img{
+                max-width: 30%;
+                height: 50px;
+            }
+        }
+    }
+}
+.zoomed_img{
+    width: 300px;
+    margin-right: 100px;
+    transform: scale(1.3);
+}
+
+
+
+/* Modifica della variabile CSS per la larghezza dell'immagine in base alla dimensione della colonna */
+@media all and (min-width: 576px) {
+    .img_comics {
+        img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .img_comics {
+        img{
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
+.img_comics {
     img {
+        /* Utilizzo della variabile per la larghezza dell'immagine */
         width: 175px;
         height: 175px;
         object-fit: cover;

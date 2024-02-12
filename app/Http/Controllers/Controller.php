@@ -14,8 +14,10 @@ class Controller extends BaseController
     {
         $comics = $this->DatiComics();
         $listPages = $this->ListaLink();
-    
-        return view('pages.main', compact('comics', 'listPages'));
+        $listInfo = $this->ListaInfo();
+        $listFooter = $this->listFooter();
+
+        return view('pages.main', compact('comics', 'listPages', 'listInfo','listFooter'));
     }
     public function DatiComics()
     {
@@ -289,5 +291,54 @@ class Controller extends BaseController
             ],
         ];
         return $listPages;
+    }
+    public function listaInfo()
+    {
+        $list_info = [
+            [
+                "name" => 'DIGITAL COMICS',
+                "url_img" => '/public/img/buy-comics-digital-comics.png'
+            ],
+            [
+                "name" => 'DC MERCHANDISE',
+                "url_img" => '/public/img/buy-comics-merchandise.png'
+            ],
+            [
+                "name" => 'SUBSCRIPTION',
+                "url_img" => '/public/img/buy-comics-subscriptions.png'
+            ],
+            [
+                "name" => 'COMIC SHOP LOCATOR',
+                "url_img" => '/public/img/buy-comics-shop-locator.png'
+            ],
+            [
+                "name" => 'DC POWER VISA',
+                "url_img" => '/public/img/buy-dc-power-visa.svg'
+            ]
+        ];
+        return $list_info;
+    }
+    public function listFooter()
+    {
+        $list_info = [
+            [
+                "name" => 'DC COMICS',
+                "info_array" => ['Characters', 'Comics', 'Movies', 'TV', 'Games', 'Videos', 'News']
+            ],
+            [
+                "name" => 'DC',
+                "info_array" => ['Terms Of Use', 'Privacy policy (New)', 'Ad Choices', 'Advertising', 'Jobs', 'Subscriptions', 'Talent Workshops', 'CPSC Certificates', 'Rating', 'Shop Help', 'Contact Us']
+            ],
+            [
+                "name" => 'SITES',
+                "info_array" => ['DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Power Visa']
+            ],
+            [
+                "name" => 'SHOP',
+                "info_array" => ['Shop DC', 'Shop DC Collectibles']
+            ]
+        ];
+
+        return $list_info;
     }
 }
