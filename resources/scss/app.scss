@@ -105,12 +105,49 @@ header {
     }
 }
 .zoomed_img{
-    width: 300px;
-    margin-right: 100px;
+    width: 400px;
     transform: scale(1.3);
 }
 
 
+.image_background {
+    background-image: url(/public/img/footer-bg.jpg);
+    background-size: cover;
+    // height: 300px;
+    // DEBUG
+    // margin-bottom: 40px;
+}
+
+
+.social-container-bg {
+    a.col-5 {
+        margin-left: 20px;
+        border: 1px solid $blue_border_button;
+        color: white;
+        text-align: center;
+        font-size: 15px;
+        padding: 15px 5px;
+        width: 150px;
+    }
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 10px;
+    height: calc($height_container + 20px);
+    background-color: $grey_background_color;
+
+    h4 {
+        font-weight: lighter;
+        color: $blue_border_button;
+        font-size: 20px;
+    }
+    .gap-ul-container{
+        gap: 30px;
+    }
+    ul{
+        gap: 20px;
+    }
+}
 
 /* Modifica della variabile CSS per la larghezza dell'immagine in base alla dimensione della colonna */
 @media all and (min-width: 576px) {

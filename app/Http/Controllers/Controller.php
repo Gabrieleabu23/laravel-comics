@@ -16,8 +16,9 @@ class Controller extends BaseController
         $listPages = $this->ListaLink();
         $listInfo = $this->ListaInfo();
         $listFooter = $this->listFooter();
+        $socialFooter = $this->socialFooter();
 
-        return view('pages.main', compact('comics', 'listPages', 'listInfo','listFooter'));
+        return view('pages.main', compact('comics', 'listPages', 'listInfo','listFooter','socialFooter'));
     }
     public function DatiComics()
     {
@@ -341,4 +342,30 @@ class Controller extends BaseController
 
         return $list_info;
     }
+    public function socialFooter()
+    {
+        $social_list= [
+            [
+                'name'=> "#FACEBOOK",
+                'url_img'=> '/public/img/footer-facebook.png'
+            ],
+            [
+                'name'=> "#TWITTER",
+                'url_img'=> '/public/img/footer-twitter.png'
+            ],
+            [
+                'name'=> "#YOUTUBE",
+                'url_img'=> '/public/img/footer-youtube.png'
+            ],
+            [
+                'name'=> "#PINTEREST",
+                'url_img'=> '/public/img/footer-pinterest.png'
+            ],
+            [
+                'name'=> "#PERISCOPE",
+                'url_img'=> '/public/img/footer-periscope.png'
+            ]
+            ];
+        return $social_list;
+}
 }
